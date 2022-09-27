@@ -30,7 +30,7 @@ public class Controller
 		String secondWord = keyboardInput.nextLine();
 		//Do you want to keep doing this over and over?????
 		
-		for(int index = 0; index < 10; index++)
+		for (int index = 0; index < 10; index++)
 		{
 			System.out.println("Type in a name...");
 			String name = keyboardInput.nextLine();
@@ -43,5 +43,11 @@ public class Controller
 		{
 			System.out.println("The" + index + "the name is: " + nameList.get(index));
 		}
+	
+	String thisWasTheLastName = nameList.remove(nameList.size() - 1);
+	
+	System.out.println("There are now " + nameList.size() + " name in the list");
+	System.out.println("We took out: " + thisWasTheLastName);
 	}
+	
 }
