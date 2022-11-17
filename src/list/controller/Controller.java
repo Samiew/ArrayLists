@@ -79,6 +79,7 @@ public class Controller
 		demoWords.add("insertion");
 		demoWords.add("sort");
 		demoWords.add("demonstration");
+		demoWords.add("Samie");
 		
 		insertionSort(demoWords);
 		
