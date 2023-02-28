@@ -19,7 +19,23 @@ public class Controller
 		moreListStuff();
 		listDemo();
 
+		mystery("This is myy first demo for void recurion");
+		mystery("Two");
+		
 		keyboardInput.close();
+	}
+	
+	private void mystery(String text)
+	{
+		if (text.indexOf("e") < 5)
+		{
+			System.out.println("Base Case!" + text);
+		}
+		else 
+		{
+			System.out.println("Recursive Case: " + text);
+			mystery(text.substring(text.length() / 2));
+		}
 	}
 
 	private void listDemo()
