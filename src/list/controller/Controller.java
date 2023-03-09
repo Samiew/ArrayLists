@@ -16,11 +16,17 @@ public class Controller
 
 	public void start()
 	{
-		moreListStuff();
-		listDemo();
+//		moreListStuff();
+//		listDemo();
+		
+		String recursionDemo = demo("");
+		System.out.println(recursionDemo);
+		recursionDemo = demo("Using Strings for recursion");
+		System.out.println(recursionDemo);
 
 		mystery("This is myy first demo for void recurion");
 		mystery("Two");
+		mystery("ajsdbfeswkhjewbfwejk");
 		
 		keyboardInput.close();
 	}
@@ -33,8 +39,20 @@ public class Controller
 		}
 		else 
 		{
-			System.out.println("Recursive Case: " + text);
 			mystery(text.substring(text.length() / 2));
+			System.out.println("Recursive Case: " + text);
+		}
+	}
+	
+	private String demo(String text)
+	{
+		if (text.length() == 1)
+		{
+			return text + "\n";
+		}
+		else
+		{
+			return demo (text.substring(1)) + text.substring(0, 1) + "\n";
 		}
 	}
 
